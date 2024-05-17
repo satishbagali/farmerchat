@@ -20,6 +20,8 @@ This documentation gives an overview of the Farmer.Chat code bundle. The 'Classe
    :hidden:
    :caption: Content:
 
+   api
+   common
    generation
    intent_classification
    language_service

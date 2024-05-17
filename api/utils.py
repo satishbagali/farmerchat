@@ -1,3 +1,4 @@
+"""
 import asyncio, logging, json, datetime, os, uuid
 
 from common.constants import Constants
@@ -30,19 +31,23 @@ from language_service.utils import get_language_by_id
 
 
 logger = logging.getLogger(__name__)
+"""
+
+
 
 
 def authenticate_user_based_on_email(email_id):
     """
-    Authenticate the user on content retrieval site
+    Authenticate the user via content authenticate site
     """
     authenticated_user = None
     try:
         # user_obj = get_record_by_field(User, "email", email_id)
-        authentication_url = f"{Config.CONTENT_DOMAIN_URL}{Config.CONTENT_AUTHENTICATE_ENDPOINT}"
+        #authentication_url = f"{Config.CONTENT_DOMAIN_URL}{Config.CONTENT_AUTHENTICATE_ENDPOINT}"
         response = send_request(
             authentication_url, data={"email": email_id}, content_type="JSON", request_type="POST", total_retry=3
         )
+        # authenticated_user = response if len(response) >= 1 else None
         authenticated_user = json.loads(response.text) if response and response.status_code == 200 else None
 
     except Exception as error:
@@ -55,9 +60,19 @@ def preprocess_user_data(
     original_query,
     email_id,
     authenticated_user={},
-    with_db_config=Config.WITH_DB_CONFIG,
+    #with_db_config=Config.WITH_DB_CONFIG,
+    #message_input_type=Constants.MESSAGE_INPUT_TYPE_TEXT,
+):
+    """
+    Process user profile fetched from content authenticate site by saving or updating.
+    def preprocess_user_data(
+    original_query,
+    email_id,
+    authenticated_user={},
+    #with_db_config=Config.WITH_DB_CONFIG,
     message_input_type=Constants.MESSAGE_INPUT_TYPE_TEXT,
 ):
+    """
     user_name, message_id, message_obj, user_id = None, None, None, None
     user_data, message_data_to_insert_or_update = {}, {}
 
@@ -100,6 +115,10 @@ def preprocess_user_data(
 
 
 def process_query(original_query, email_id, authenticated_user={}):
+    """
+    Pre-process user profile and user query, execute RAG pipeline with intent classification if the
+    user query is relevant to the content, and finally return the generated response for the same.
+    """
     message_obj, chat_history = None, None
     response_map, message_data_to_insert_or_update, message_data_update_post_rag_pipeline = {}, {}, {}
 
@@ -177,9 +196,12 @@ def process_query(original_query, email_id, authenticated_user={}):
 def process_input_audio_to_base64(
     original_text,
     message_id=None,
-    language_code=Constants.LANGUAGE_SHORT_CODE_NATIVE,
-    with_db_config=Config.WITH_DB_CONFIG,
+    #language_code=Constants.LANGUAGE_SHORT_CODE_NATIVE,
+    #with_db_config=Config.WITH_DB_CONFIG,
 ):
+    """
+    Synthesise input text or user query to audio in specified language, and encode to base64 string.
+    """
     input_audio, input_audio_file = None, None
 
     try:
@@ -197,7 +219,12 @@ def process_input_audio_to_base64(
     return input_audio
 
 
-def process_output_audio(original_text, message_id=None, with_db_config=Config.WITH_DB_CONFIG):
+def process_output_audio(original_text, message_id=None,):# with_db_config=Config.WITH_DB_CONFIG):
+    """
+    Synthesise output text or generated response to audio in english language, and encode to base64 string
+    Note : Org methoc call
+    def process_output_audio(original_text, message_id=None,):# with_db_config=Config.WITH_DB_CONFIG):
+    """
     response_audio, response_audio_file, message_obj = None, None, None
     message_data_to_insert_or_update = {}
 
@@ -229,10 +256,12 @@ def process_output_audio(original_text, message_id=None, with_db_config=Config.W
 
     return response_audio
 
-
 def handle_input_query(input_query):
+    """
+    Return a binary file by decoding input query (as base64 string).
+    """
     # if not Uploaded file, convert the base64 file string to a binary file
-    file_name = None
+    file_name, input_query_file = None, None
 
     input_query_file = decode_base64_to_binary(input_query)
 
@@ -249,11 +278,15 @@ def process_transcriptions(
     voice_file,
     email_id,
     authenticated_user={},
-    language_code=Constants.LANGUAGE_SHORT_CODE_NATIVE,
-    language_bcp_code=Constants.LANGUAGE_BCP_CODE_NATIVE,
-    message_input_type=Constants.MESSAGE_INPUT_TYPE_VOICE,
-    with_db_config=Config.WITH_DB_CONFIG,
+    #language_code=Constants.LANGUAGE_SHORT_CODE_NATIVE,
+    #language_bcp_code=Constants.LANGUAGE_BCP_CODE_NATIVE,
+    #message_input_type=Constants.MESSAGE_INPUT_TYPE_VOICE,
+    #with_db_config=Config.WITH_DB_CONFIG,
 ):
+    """
+    Process generation of transcriptions (text) for a given audio or voice file
+    in a specified language if any or in user preferred language.
+    """
     message_id, message_obj = None, None
     response_map, message_data_to_insert_or_update, language_dict = {}, {}, {}
 

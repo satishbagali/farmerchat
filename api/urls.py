@@ -1,3 +1,4 @@
+"""
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
@@ -11,3 +12,8 @@ router.register(r"language", LanguageViewSet, basename="language")
 urlpatterns = [
     path("", include(router.urls)),
 ]
+"""
+
+def dummy():
+    return "Commented the main code. Sphinx issue"
+
