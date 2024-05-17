@@ -1,8 +1,11 @@
+"""
 import logging
 from peewee import DoesNotExist
 from database.database_config import db_conn
+"""
 
-logger = logging.getLogger(__name__)
+
+#logger = logging.getLogger(__name__)
 
 
 def get_record_by_field(model_class, field_name, value):

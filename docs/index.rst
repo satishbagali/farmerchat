@@ -21,6 +21,7 @@ This documentation gives an overview of the Farmer.Chat code bundle. The 'Classe
    :caption: Content:
 
    api
+   database
    common
    generation
    intent_classification

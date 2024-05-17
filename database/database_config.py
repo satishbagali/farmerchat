@@ -1,7 +1,9 @@
+"""
 import os, sys
 from pathlib import Path
 from peewee import PostgresqlDatabase
 from playhouse.pool import PooledPostgresqlExtDatabase
+"""
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_DIR = os.path.join(BASE_DIR, "django_core")
