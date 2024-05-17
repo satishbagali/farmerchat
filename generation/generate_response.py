@@ -2,17 +2,18 @@
 This is generate_response.py file
 """
 
-
+"""
 import datetime
 import asyncio
 
 from django_core.config import Config
 from rag_service.openai_service import make_openai_request
+"""
 
 
 
-#async def setup_prompt(user_name, context_chunks, rephrased_query):
-async def setup_prompt(user_name, context_chunks, rephrased_query, system_prompt=Config.GENERATION_PROMPT):
+
+async def setup_prompt(user_name, context_chunks, rephrased_query):
     #satish : async def setup_prompt(user_name, context_chunks, rephrased_query, system_prompt=Config.GENERATION_PROMPT#):
     """
     Note : The actual function call is,
