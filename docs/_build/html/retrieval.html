@@ -20,7 +20,8 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="reranking package" href="reranking.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,9 +44,20 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="generation.html">generation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intent_classification.html">intent_classification package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_service.html">language_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rag_service.html">rag_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rephrasing.html">rephrasing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reranking.html">reranking package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">retrieval package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-retrieval.content_retrieval">content_retrieval</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#retrieval.content_retrieval.content_retrieval"><code class="docutils literal notranslate"><span class="pre">content_retrieval()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -74,21 +86,31 @@
              
   <section id="retrieval-package">
 <h1>retrieval package<a class="headerlink" href="#retrieval-package" title="Link to this heading"></a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
-</section>
-<section id="retrieval-content-retrieval-module">
-<h2>retrieval.content_retrieval module<a class="headerlink" href="#retrieval-content-retrieval-module" title="Link to this heading"></a></h2>
-</section>
-<section id="module-retrieval">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-retrieval" title="Link to this heading"></a></h2>
+<section id="module-retrieval.content_retrieval">
+<span id="content-retrieval"></span><h2>content_retrieval<a class="headerlink" href="#module-retrieval.content_retrieval" title="Link to this heading"></a></h2>
+<p>import json, datetime, logging
+from django_core.config import Config
+from common.utils import send_request</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="retrieval.content_retrieval.content_retrieval">
+<span class="sig-prename descclassname"><span class="pre">retrieval.content_retrieval.</span></span><span class="sig-name descname"><span class="pre">content_retrieval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/retrieval/content_retrieval.html#content_retrieval"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#retrieval.content_retrieval.content_retrieval" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Note : The original definition is below. For the documentation purpose two parameters are not included due to a documentation defect
+def content_retrieval(
+original_query, email, domain_url=Config.CONTENT_DOMAIN_URL, api_endpoint=Config.CONTENT_RETRIEVAL_ENDPOINT</p>
+</div></blockquote>
+<p>):</p>
+</dd></dl>
+
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="reranking.html" class="btn btn-neutral float-left" title="reranking package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
 
   <hr/>
 

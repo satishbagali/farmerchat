@@ -44,7 +44,12 @@
               <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="generation.html">generation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intent_classification.html">intent_classification package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_service.html">language_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rag_service.html">rag_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rephrasing.html">rephrasing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reranking.html">reranking package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieval.html">retrieval package</a></li>
 </ul>
 
         </div>
@@ -75,20 +80,29 @@
 
 <div class="genindex-jumpbox">
  <a href="#A"><strong>A</strong></a>
+ | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
  
 </div>
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="language_service.html#language_service.translation.a_translate_to">a_translate_to() (in module language_service.translation)</a>
+</li>
+      <li><a href="language_service.html#language_service.translation.a_translate_to_english">a_translate_to_english() (in module language_service.translation)</a>
+</li>
       <li>
     api
 
@@ -138,6 +152,20 @@
   </ul></td>
 </tr></table>
 
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intent_classification.html#intent_classification.intent.classify_intent">classify_intent() (in module intent_classification.intent)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rephrasing.html#rephrasing.rephrase.condense_query_prompt">condense_query_prompt() (in module rephrasing.rephrase)</a>
+</li>
+      <li><a href="retrieval.html#retrieval.content_retrieval.content_retrieval">content_retrieval() (in module retrieval.content_retrieval)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -145,7 +173,15 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="generation.html#generation.generate_response.dummy">dummy() (in module generation.generate_response)</a>
+      <li><a href="language_service.html#language_service.translation.detect_language_and_translate_to_english">detect_language_and_translate_to_english() (in module language_service.translation)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rag_service.html#rag_service.execute_rag.execute_rag_pipeline">execute_rag_pipeline() (in module rag_service.execute_rag)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -153,10 +189,16 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intent_classification.html#intent_classification.intent.generate_convo_response">generate_convo_response() (in module intent_classification.intent)</a>
+</li>
+      <li><a href="intent_classification.html#intent_classification.intent.generate_exit_response">generate_exit_response() (in module intent_classification.intent)</a>
+</li>
+      <li><a href="intent_classification.html#intent_classification.intent.generate_out_of_context_response">generate_out_of_context_response() (in module intent_classification.intent)</a>
+</li>
       <li><a href="generation.html#generation.generate_response.generate_query_response">generate_query_response() (in module generation.generate_response)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="intent_classification.html#intent_classification.intent.generate_unclear_qn_response">generate_unclear_qn_response() (in module intent_classification.intent)</a>
+</li>
       <li>
     generation.generate_response
 
@@ -165,25 +207,44 @@
 </li>
       </ul></li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    generation.utils
+
+      <ul>
+        <li><a href="generation.html#module-generation.utils">module</a>
+</li>
+      </ul></li>
+      <li><a href="language_service.html#language_service.utils.get_all_languages">get_all_languages() (in module language_service.utils)</a>
+</li>
+      <li><a href="language_service.html#language_service.utils.get_language_by_code">get_language_by_code() (in module language_service.utils)</a>
+</li>
+      <li><a href="language_service.html#language_service.utils.get_language_by_id">get_language_by_id() (in module language_service.utils)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li>
-    intent_classification
-
-      <ul>
-        <li><a href="intent_classification.html#module-intent_classification">module</a>
+      <li><a href="generation.html#generation.utils.insert_generation_data">insert_generation_data() (in module generation.utils)</a>
 </li>
-      </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rephrasing.html#rephrasing.utils.insert_rephrase_data">insert_rephrase_data() (in module rephrasing.utils)</a>
+</li>
       <li>
     intent_classification.constants
 
       <ul>
         <li><a href="intent_classification.html#module-intent_classification.constants">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    intent_classification.intent
+
+      <ul>
+        <li><a href="intent_classification.html#module-intent_classification.intent">module</a>
 </li>
       </ul></li>
       <li><a href="intent_classification.html#intent_classification.constants.IntentConstants">IntentConstants (class in intent_classification.constants)</a>
@@ -195,10 +256,33 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
-    language_service
+    language_service.asr
 
       <ul>
-        <li><a href="language_service.html#module-language_service">module</a>
+        <li><a href="language_service.html#module-language_service.asr">module</a>
+</li>
+      </ul></li>
+      <li>
+    language_service.translation
+
+      <ul>
+        <li><a href="language_service.html#module-language_service.translation">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    language_service.tts
+
+      <ul>
+        <li><a href="language_service.html#module-language_service.tts">module</a>
+</li>
+      </ul></li>
+      <li>
+    language_service.utils
+
+      <ul>
+        <li><a href="language_service.html#module-language_service.utils">module</a>
 </li>
       </ul></li>
   </ul></td>
@@ -208,6 +292,8 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="manage.html#manage.main">main() (in module manage)</a>
+</li>
+      <li><a href="rag_service.html#rag_service.openai_service.make_openai_request">make_openai_request() (in module rag_service.openai_service)</a>
 </li>
       <li>
     manage
@@ -234,19 +320,35 @@
 </li>
         <li><a href="generation.html#module-generation.generate_response">generation.generate_response</a>
 </li>
-        <li><a href="intent_classification.html#module-intent_classification">intent_classification</a>
+        <li><a href="generation.html#module-generation.utils">generation.utils</a>
 </li>
         <li><a href="intent_classification.html#module-intent_classification.constants">intent_classification.constants</a>
 </li>
-        <li><a href="language_service.html#module-language_service">language_service</a>
+        <li><a href="intent_classification.html#module-intent_classification.intent">intent_classification.intent</a>
+</li>
+        <li><a href="language_service.html#module-language_service.asr">language_service.asr</a>
+</li>
+        <li><a href="language_service.html#module-language_service.translation">language_service.translation</a>
+</li>
+        <li><a href="language_service.html#module-language_service.tts">language_service.tts</a>
+</li>
+        <li><a href="language_service.html#module-language_service.utils">language_service.utils</a>
 </li>
         <li><a href="manage.html#module-manage">manage</a>
 </li>
-        <li><a href="rephrasing.html#module-rephrasing">rephrasing</a>
+        <li><a href="rag_service.html#module-rag_service.execute_rag">rag_service.execute_rag</a>
 </li>
-        <li><a href="reranking.html#module-reranking">reranking</a>
+        <li><a href="rag_service.html#module-rag_service.openai_service">rag_service.openai_service</a>
 </li>
-        <li><a href="retrieval.html#module-retrieval">retrieval</a>
+        <li><a href="rag_service.html#module-rag_service.utils">rag_service.utils</a>
+</li>
+        <li><a href="rephrasing.html#module-rephrasing.rephrase">rephrasing.rephrase</a>
+</li>
+        <li><a href="rephrasing.html#module-rephrasing.utils">rephrasing.utils</a>
+</li>
+        <li><a href="reranking.html#module-reranking.rerank">reranking.rerank</a>
+</li>
+        <li><a href="retrieval.html#module-retrieval.content_retrieval">retrieval.content_retrieval</a>
 </li>
       </ul></li>
   </ul></td>
@@ -260,30 +362,84 @@
   </ul></td>
 </tr></table>
 
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reranking.html#reranking.rerank.parse_single_rerank_json">parse_single_rerank_json() (in module reranking.rerank)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rag_service.html#rag_service.utils.post_process_rag_pipeline">post_process_rag_pipeline() (in module rag_service.utils)</a>
+</li>
+      <li><a href="intent_classification.html#intent_classification.intent.process_user_intent">process_user_intent() (in module intent_classification.intent)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rag_service.html#rag_service.openai_service.query_qdrant_collection">query_qdrant_collection() (in module rag_service.openai_service)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
-    rephrasing
+    rag_service.execute_rag
 
       <ul>
-        <li><a href="rephrasing.html#module-rephrasing">module</a>
+        <li><a href="rag_service.html#module-rag_service.execute_rag">module</a>
 </li>
       </ul></li>
       <li>
-    reranking
+    rag_service.openai_service
 
       <ul>
-        <li><a href="reranking.html#module-reranking">module</a>
+        <li><a href="rag_service.html#module-rag_service.openai_service">module</a>
+</li>
+      </ul></li>
+      <li>
+    rag_service.utils
+
+      <ul>
+        <li><a href="rag_service.html#module-rag_service.utils">module</a>
+</li>
+      </ul></li>
+      <li><a href="rephrasing.html#rephrasing.rephrase.rephrase_query">rephrase_query() (in module rephrasing.rephrase)</a>
+</li>
+      <li>
+    rephrasing.rephrase
+
+      <ul>
+        <li><a href="rephrasing.html#module-rephrasing.rephrase">module</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
-    retrieval
+    rephrasing.utils
 
       <ul>
-        <li><a href="retrieval.html#module-retrieval">module</a>
+        <li><a href="rephrasing.html#module-rephrasing.utils">module</a>
+</li>
+      </ul></li>
+      <li><a href="reranking.html#reranking.rerank.rerank_query">rerank_query() (in module reranking.rerank)</a>
+</li>
+      <li>
+    reranking.rerank
+
+      <ul>
+        <li><a href="reranking.html#module-reranking.rerank">module</a>
+</li>
+      </ul></li>
+      <li>
+    retrieval.content_retrieval
+
+      <ul>
+        <li><a href="retrieval.html#module-retrieval.content_retrieval">module</a>
 </li>
       </ul></li>
   </ul></td>
@@ -293,6 +449,20 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="generation.html#generation.generate_response.setup_prompt">setup_prompt() (in module generation.generate_response)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="language_service.html#language_service.tts.synthesize_speech">synthesize_speech() (in module language_service.tts)</a>
+</li>
+      <li><a href="language_service.html#language_service.tts.synthesize_speech_azure">synthesize_speech_azure() (in module language_service.tts)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="language_service.html#language_service.asr.transcribe_and_translate">transcribe_and_translate() (in module language_service.asr)</a>
 </li>
   </ul></td>
 </tr></table>

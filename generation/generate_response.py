@@ -10,9 +10,6 @@ from django_core.config import Config
 from rag_service.openai_service import make_openai_request
 """
 
-def dummy(param1):
-    return ""
-
 
 async def setup_prompt(user_name, context_chunks, rephrased_query):
     #satish : async def setup_prompt(user_name, context_chunks, rephrased_query, system_prompt=Config.GENERATION_PROMPT#):

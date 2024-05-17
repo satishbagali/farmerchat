@@ -1,10 +1,8 @@
 language\_service package
 =========================
 
-Submodules
-----------
 
-language\_service.asr module
+asr 
 ----------------------------
 
 .. automodule:: language_service.asr
@@ -12,7 +10,7 @@ language\_service.asr module
    :undoc-members:
    :show-inheritance:
 
-language\_service.translation module
+translation 
 ------------------------------------
 
 .. automodule:: language_service.translation
@@ -20,7 +18,7 @@ language\_service.translation module
    :undoc-members:
    :show-inheritance:
 
-language\_service.tts module
+tts 
 ----------------------------
 
 .. automodule:: language_service.tts
@@ -28,18 +26,10 @@ language\_service.tts module
    :undoc-members:
    :show-inheritance:
 
-language\_service.utils module
+utils 
 ------------------------------
 
 .. automodule:: language_service.utils
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: language_service
    :members:
    :undoc-members:
    :show-inheritance:

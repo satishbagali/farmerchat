@@ -10,6 +10,7 @@ farmerchat
    intent_classification
    language_service
    manage
+   rag_service
    rephrasing
    reranking
    retrieval

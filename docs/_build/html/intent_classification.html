@@ -20,7 +20,9 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="language_service package" href="language_service.html" />
+    <link rel="prev" title="generation package" href="generation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,9 +45,39 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="generation.html">generation package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">intent_classification package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-intent_classification.constants">constants</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#intent_classification.constants.IntentConstants"><code class="docutils literal notranslate"><span class="pre">IntentConstants</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#intent_classification.constants.IntentConstants.USER_INTENT_CHANGE_CROP"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_CHANGE_CROP</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intent_classification.constants.IntentConstants.USER_INTENT_DISAPPOINTMENT"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_DISAPPOINTMENT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intent_classification.constants.IntentConstants.USER_INTENT_EXIT"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_EXIT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intent_classification.constants.IntentConstants.USER_INTENT_FARMING"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_FARMING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intent_classification.constants.IntentConstants.USER_INTENT_GREETING"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_GREETING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intent_classification.constants.IntentConstants.USER_INTENT_OUT_CONTEXT"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_OUT_CONTEXT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intent_classification.constants.IntentConstants.USER_INTENT_REFERRING_BACK"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_REFERRING_BACK</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intent_classification.constants.IntentConstants.USER_INTENT_UNCLEAR"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_UNCLEAR</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-intent_classification.intent">intent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#intent_classification.intent.classify_intent"><code class="docutils literal notranslate"><span class="pre">classify_intent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intent_classification.intent.generate_convo_response"><code class="docutils literal notranslate"><span class="pre">generate_convo_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intent_classification.intent.generate_exit_response"><code class="docutils literal notranslate"><span class="pre">generate_exit_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intent_classification.intent.generate_out_of_context_response"><code class="docutils literal notranslate"><span class="pre">generate_out_of_context_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intent_classification.intent.generate_unclear_qn_response"><code class="docutils literal notranslate"><span class="pre">generate_unclear_qn_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intent_classification.intent.process_user_intent"><code class="docutils literal notranslate"><span class="pre">process_user_intent()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="language_service.html">language_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rag_service.html">rag_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rephrasing.html">rephrasing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reranking.html">reranking package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieval.html">retrieval package</a></li>
 </ul>
 
         </div>
@@ -74,11 +106,8 @@
              
   <section id="intent-classification-package">
 <h1>intent_classification package<a class="headerlink" href="#intent-classification-package" title="Link to this heading"></a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
-</section>
 <section id="module-intent_classification.constants">
-<span id="intent-classification-constants-module"></span><h2>intent_classification.constants module<a class="headerlink" href="#module-intent_classification.constants" title="Link to this heading"></a></h2>
+<span id="constants"></span><h2>constants<a class="headerlink" href="#module-intent_classification.constants" title="Link to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="intent_classification.constants.IntentConstants">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">intent_classification.constants.</span></span><span class="sig-name descname"><span class="pre">IntentConstants</span></span><a class="reference internal" href="_modules/intent_classification/constants.html#IntentConstants"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#intent_classification.constants.IntentConstants" title="Link to this definition"></a></dt>
@@ -126,18 +155,52 @@
 </dd></dl>
 
 </section>
-<section id="intent-classification-intent-module">
-<h2>intent_classification.intent module<a class="headerlink" href="#intent-classification-intent-module" title="Link to this heading"></a></h2>
-</section>
-<section id="module-intent_classification">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-intent_classification" title="Link to this heading"></a></h2>
+<section id="module-intent_classification.intent">
+<span id="intent"></span><h2>intent<a class="headerlink" href="#module-intent_classification.intent" title="Link to this heading"></a></h2>
+<p>This is “intent.py”.</p>
+<p>from django_core.config import Config
+from rag_service.openai_service import make_openai_request
+from intent_classification.constants import IntentConstants</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="intent_classification.intent.classify_intent">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">intent_classification.intent.</span></span><span class="sig-name descname"><span class="pre">classify_intent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qn</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intent_classification/intent.html#classify_intent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#intent_classification.intent.classify_intent" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="intent_classification.intent.generate_convo_response">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">intent_classification.intent.</span></span><span class="sig-name descname"><span class="pre">generate_convo_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intent_classification/intent.html#generate_convo_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#intent_classification.intent.generate_convo_response" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="intent_classification.intent.generate_exit_response">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">intent_classification.intent.</span></span><span class="sig-name descname"><span class="pre">generate_exit_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intent_classification/intent.html#generate_exit_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#intent_classification.intent.generate_exit_response" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="intent_classification.intent.generate_out_of_context_response">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">intent_classification.intent.</span></span><span class="sig-name descname"><span class="pre">generate_out_of_context_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intent_classification/intent.html#generate_out_of_context_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#intent_classification.intent.generate_out_of_context_response" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="intent_classification.intent.generate_unclear_qn_response">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">intent_classification.intent.</span></span><span class="sig-name descname"><span class="pre">generate_unclear_qn_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intent_classification/intent.html#generate_unclear_qn_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#intent_classification.intent.generate_unclear_qn_response" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="intent_classification.intent.process_user_intent">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">intent_classification.intent.</span></span><span class="sig-name descname"><span class="pre">process_user_intent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_msg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/intent_classification/intent.html#process_user_intent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#intent_classification.intent.process_user_intent" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="generation.html" class="btn btn-neutral float-left" title="generation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="language_service.html" class="btn btn-neutral float-right" title="language_service package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

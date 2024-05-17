@@ -21,8 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="language_service package" href="language_service.html" />
-    <link rel="prev" title="Welcome to Agri Chat" href="index.html" /> 
+    <link rel="next" title="intent_classification package" href="intent_classification.html" />
+    <link rel="prev" title="Welcome to Farmer.Chat" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,16 +47,23 @@
               <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">generation package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-generation.generate_response">generation.generate_response module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#generation.generate_response.dummy"><code class="docutils literal notranslate"><span class="pre">dummy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-generation.generate_response">generate_response</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#generation.generate_response.generate_query_response"><code class="docutils literal notranslate"><span class="pre">generate_query_response()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#generation.generate_response.setup_prompt"><code class="docutils literal notranslate"><span class="pre">setup_prompt()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#generation-utils-module">generation.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-generation.utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generation.utils.insert_generation_data"><code class="docutils literal notranslate"><span class="pre">insert_generation_data()</span></code></a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intent_classification.html">intent_classification package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_service.html">language_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rag_service.html">rag_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rephrasing.html">rephrasing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reranking.html">reranking package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieval.html">retrieval package</a></li>
 </ul>
 
         </div>
@@ -86,13 +93,8 @@
   <section id="generation-package">
 <h1>generation package<a class="headerlink" href="#generation-package" title="Link to this heading"></a></h1>
 <section id="module-generation.generate_response">
-<span id="generation-generate-response-module"></span><h2>generation.generate_response module<a class="headerlink" href="#module-generation.generate_response" title="Link to this heading"></a></h2>
+<span id="generate-response"></span><h2>generate_response<a class="headerlink" href="#module-generation.generate_response" title="Link to this heading"></a></h2>
 <p>This is generate_response.py file</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="generation.generate_response.dummy">
-<span class="sig-prename descclassname"><span class="pre">generation.generate_response.</span></span><span class="sig-name descname"><span class="pre">dummy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/generation/generate_response.html#dummy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#generation.generate_response.dummy" title="Link to this definition"></a></dt>
-<dd></dd></dl>
-
 <dl class="py function">
 <dt class="sig sig-object py" id="generation.generate_response.generate_query_response">
 <em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">generation.generate_response.</span></span><span class="sig-name descname"><span class="pre">generate_query_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context_chunks</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rephrased_query</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/generation/generate_response.html#generate_query_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#generation.generate_response.generate_query_response" title="Link to this definition"></a></dt>
@@ -106,8 +108,15 @@ async def setup_prompt(user_name, context_chunks, rephrased_query, system_prompt
 </dd></dl>
 
 </section>
-<section id="generation-utils-module">
-<h2>generation.utils module<a class="headerlink" href="#generation-utils-module" title="Link to this heading"></a></h2>
+<section id="module-generation.utils">
+<span id="utils"></span><h2>utils<a class="headerlink" href="#module-generation.utils" title="Link to this heading"></a></h2>
+<p>from database.models import GenerationMetrics</p>
+<p>from database.db_operations import create_record</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="generation.utils.insert_generation_data">
+<span class="sig-prename descclassname"><span class="pre">generation.utils.</span></span><span class="sig-name descname"><span class="pre">insert_generation_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generation_data_logs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/generation/utils.html#insert_generation_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#generation.utils.insert_generation_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 </section>
 
@@ -115,8 +124,8 @@ async def setup_prompt(user_name, context_chunks, rephrased_query, system_prompt
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Agri Chat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="language_service.html" class="btn btn-neutral float-right" title="language_service package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Farmer.Chat" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="intent_classification.html" class="btn btn-neutral float-right" title="intent_classification package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

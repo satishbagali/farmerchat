@@ -20,7 +20,9 @@
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="reranking package" href="reranking.html" />
+    <link rel="prev" title="rag_service package" href="rag_service.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,9 +45,25 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="generation.html">generation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intent_classification.html">intent_classification package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_service.html">language_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rag_service.html">rag_service package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">rephrasing package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-rephrasing.rephrase">rephrase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rephrasing.rephrase.condense_query_prompt"><code class="docutils literal notranslate"><span class="pre">condense_query_prompt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rephrasing.rephrase.rephrase_query"><code class="docutils literal notranslate"><span class="pre">rephrase_query()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-rephrasing.utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rephrasing.utils.insert_rephrase_data"><code class="docutils literal notranslate"><span class="pre">insert_rephrase_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reranking.html">reranking package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieval.html">retrieval package</a></li>
 </ul>
 
         </div>
@@ -74,24 +92,73 @@
              
   <section id="rephrasing-package">
 <h1>rephrasing package<a class="headerlink" href="#rephrasing-package" title="Link to this heading"></a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<section id="module-rephrasing.rephrase">
+<span id="rephrase"></span><h2>rephrase<a class="headerlink" href="#module-rephrasing.rephrase" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="rephrasing.rephrase.condense_query_prompt">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rephrasing.rephrase.</span></span><span class="sig-name descname"><span class="pre">condense_query_prompt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_history</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rephrasing/rephrase.html#condense_query_prompt"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rephrasing.rephrase.condense_query_prompt" title="Link to this definition"></a></dt>
+<dd><p>Condense the prompt / query with the chat history &amp; input message / query of the client.</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>original_query: str</dt><dd><p>original query from the client</p>
+</dd>
+<dt>chat_history: str</dt><dd><p>previous chat history of the client</p>
+</dd>
+</dl>
 </section>
-<section id="rephrasing-rephrase-module">
-<h2>rephrasing.rephrase module<a class="headerlink" href="#rephrasing-rephrase-module" title="Link to this heading"></a></h2>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>condense_prompt: str</dt><dd><p>return a condensed prompt</p>
+</dd>
+</dl>
 </section>
-<section id="rephrasing-utils-module">
-<h2>rephrasing.utils module<a class="headerlink" href="#rephrasing-utils-module" title="Link to this heading"></a></h2>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rephrasing.rephrase.rephrase_query">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rephrasing.rephrase.</span></span><span class="sig-name descname"><span class="pre">rephrase_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_query</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chat_history</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rephrasing/rephrase.html#rephrase_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rephrasing.rephrase.rephrase_query" title="Link to this definition"></a></dt>
+<dd><p>Rephrase the input message / query with chat history (if available) from openAI and return it.</p>
+<section id="id1">
+<h3>Parameters<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<dl class="simple">
+<dt>original_query: str</dt><dd><p>original query from the client</p>
+</dd>
+<dt>chat_history: str</dt><dd><p>previous chat history of the client (default: None)</p>
+</dd>
+</dl>
 </section>
-<section id="module-rephrasing">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-rephrasing" title="Link to this heading"></a></h2>
+<section id="id2">
+<h3>Returns<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<dl>
+<dt>rephrased_response: dict</dt><dd><p>return a dictionary containing rephrased query token and other relevant metrics</p>
+<p>Ex:</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-rephrasing.utils">
+<span id="utils"></span><h2>utils<a class="headerlink" href="#module-rephrasing.utils" title="Link to this heading"></a></h2>
+<p>from database.models import RephraseMetrics
+from database.db_operations import create_record</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="rephrasing.utils.insert_rephrase_data">
+<span class="sig-prename descclassname"><span class="pre">rephrasing.utils.</span></span><span class="sig-name descname"><span class="pre">insert_rephrase_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rephrase_data_logs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/rephrasing/utils.html#insert_rephrase_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#rephrasing.utils.insert_rephrase_data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rag_service.html" class="btn btn-neutral float-left" title="rag_service package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="reranking.html" class="btn btn-neutral float-right" title="reranking package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

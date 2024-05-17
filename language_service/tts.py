@@ -1,3 +1,9 @@
+"""
+This is "tts.py"
+"""
+
+
+"""
 import asyncio, aiohttp, logging, uuid
 from google.cloud import texttospeech
 from google.oauth2 import service_account
@@ -6,11 +12,12 @@ from common.constants import Constants
 from common.utils import clean_text
 from language_service.utils import get_language_by_code
 from django_core.config import Config
+"""
 
-logger = logging.getLogger(__name__)
+#logger = logging.getLogger(__name__)
 
 
-credentials = service_account.Credentials.from_service_account_file(Config.GOOGLE_APPLICATION_CREDENTIALS)
+#credentials = service_account.Credentials.from_service_account_file(Config.GOOGLE_APPLICATION_CREDENTIALS)
 
 
 async def synthesize_speech_azure(text_to_synthesize, language_code, aiohttp_session):
@@ -51,12 +58,13 @@ async def synthesize_speech_azure(text_to_synthesize, language_code, aiohttp_ses
     return audio_content
 
 
+
 async def synthesize_speech(
     input_text: str,
     input_language: str,
     id_string: str = None,
     aiohttp_session=None,
-    audio_encoding_format=texttospeech.AudioEncoding.OGG_OPUS,
+    #audio_encoding_format=texttospeech.AudioEncoding.OGG_OPUS,
     sample_rate_hertz=48000,
 ) -> str:
     id_string = uuid.uuid4() if not id_string else id_string

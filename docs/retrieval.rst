@@ -1,21 +1,12 @@
 retrieval package
 =================
 
-Submodules
-----------
 
-retrieval.content\_retrieval module
+content\_retrieval 
 -----------------------------------
 
 .. automodule:: retrieval.content_retrieval
    :members:
    :undoc-members:
    :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: retrieval
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   

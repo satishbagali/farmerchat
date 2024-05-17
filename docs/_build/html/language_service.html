@@ -21,7 +21,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="generation package" href="generation.html" /> 
+    <link rel="next" title="rag_service package" href="rag_service.html" />
+    <link rel="prev" title="intent_classification package" href="intent_classification.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,15 +47,35 @@
               <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="generation.html">generation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intent_classification.html">intent_classification package</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">language_service package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#language-service-asr-module">language_service.asr module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#language-service-translation-module">language_service.translation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#language-service-tts-module">language_service.tts module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#language-service-utils-module">language_service.utils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-language_service">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-language_service.asr">asr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.asr.transcribe_and_translate"><code class="docutils literal notranslate"><span class="pre">transcribe_and_translate()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#module-language_service.translation">translation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.translation.a_translate_to"><code class="docutils literal notranslate"><span class="pre">a_translate_to()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.translation.a_translate_to_english"><code class="docutils literal notranslate"><span class="pre">a_translate_to_english()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.translation.detect_language_and_translate_to_english"><code class="docutils literal notranslate"><span class="pre">detect_language_and_translate_to_english()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-language_service.tts">tts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.tts.synthesize_speech"><code class="docutils literal notranslate"><span class="pre">synthesize_speech()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.tts.synthesize_speech_azure"><code class="docutils literal notranslate"><span class="pre">synthesize_speech_azure()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-language_service.utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.utils.get_all_languages"><code class="docutils literal notranslate"><span class="pre">get_all_languages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.utils.get_language_by_code"><code class="docutils literal notranslate"><span class="pre">get_language_by_code()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#language_service.utils.get_language_by_id"><code class="docutils literal notranslate"><span class="pre">get_language_by_id()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rag_service.html">rag_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rephrasing.html">rephrasing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reranking.html">reranking package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieval.html">retrieval package</a></li>
 </ul>
 
         </div>
@@ -83,23 +104,78 @@
              
   <section id="language-service-package">
 <h1>language_service package<a class="headerlink" href="#language-service-package" title="Link to this heading"></a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<section id="module-language_service.asr">
+<span id="asr"></span><h2>asr<a class="headerlink" href="#module-language_service.asr" title="Link to this heading"></a></h2>
+<p>This is “asr.py” file.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.asr.transcribe_and_translate">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">language_service.asr.</span></span><span class="sig-name descname"><span class="pre">transcribe_and_translate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_rate_hertz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/language_service/asr.html#transcribe_and_translate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.asr.transcribe_and_translate" title="Link to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Note: The original method call is as below. 
+Due to some ‘Documentation Syntax requiremets’ issues we have removed a parameter in the function call.</p>
+<p>async def transcribe_and_translate(
+file_name, language_code, encoding_format=speech.RecognitionConfig.AudioEncoding.MP3, sample_rate_hertz=16000</p>
+</div></blockquote>
+<p>):</p>
+</dd></dl>
+
 </section>
-<section id="language-service-asr-module">
-<h2>language_service.asr module<a class="headerlink" href="#language-service-asr-module" title="Link to this heading"></a></h2>
+<section id="module-language_service.translation">
+<span id="translation"></span><h2>translation<a class="headerlink" href="#module-language_service.translation" title="Link to this heading"></a></h2>
+<p>This is “translation.py”</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.translation.a_translate_to">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">language_service.translation.</span></span><span class="sig-name descname"><span class="pre">a_translate_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lang_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/language_service/translation.html#a_translate_to"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.translation.a_translate_to" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.translation.a_translate_to_english">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">language_service.translation.</span></span><span class="sig-name descname"><span class="pre">a_translate_to_english</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/language_service/translation.html#a_translate_to_english"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.translation.a_translate_to_english" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.translation.detect_language_and_translate_to_english">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">language_service.translation.</span></span><span class="sig-name descname"><span class="pre">detect_language_and_translate_to_english</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/language_service/translation.html#detect_language_and_translate_to_english"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.translation.detect_language_and_translate_to_english" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="language-service-translation-module">
-<h2>language_service.translation module<a class="headerlink" href="#language-service-translation-module" title="Link to this heading"></a></h2>
+<section id="module-language_service.tts">
+<span id="tts"></span><h2>tts<a class="headerlink" href="#module-language_service.tts" title="Link to this heading"></a></h2>
+<p>This is “tts.py”</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.tts.synthesize_speech">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">language_service.tts.</span></span><span class="sig-name descname"><span class="pre">synthesize_speech</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aiohttp_session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_rate_hertz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">48000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/language_service/tts.html#synthesize_speech"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.tts.synthesize_speech" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.tts.synthesize_speech_azure">
+<em class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">language_service.tts.</span></span><span class="sig-name descname"><span class="pre">synthesize_speech_azure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text_to_synthesize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language_code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aiohttp_session</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/language_service/tts.html#synthesize_speech_azure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.tts.synthesize_speech_azure" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="language-service-tts-module">
-<h2>language_service.tts module<a class="headerlink" href="#language-service-tts-module" title="Link to this heading"></a></h2>
-</section>
-<section id="language-service-utils-module">
-<h2>language_service.utils module<a class="headerlink" href="#language-service-utils-module" title="Link to this heading"></a></h2>
-</section>
-<section id="module-language_service">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-language_service" title="Link to this heading"></a></h2>
+<section id="module-language_service.utils">
+<span id="utils"></span><h2>utils<a class="headerlink" href="#module-language_service.utils" title="Link to this heading"></a></h2>
+<p>This is “utils.py”</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.utils.get_all_languages">
+<span class="sig-prename descclassname"><span class="pre">language_service.utils.</span></span><span class="sig-name descname"><span class="pre">get_all_languages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="_modules/language_service/utils.html#get_all_languages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.utils.get_all_languages" title="Link to this definition"></a></dt>
+<dd><p>Query the list of all active languages</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.utils.get_language_by_code">
+<span class="sig-prename descclassname"><span class="pre">language_service.utils.</span></span><span class="sig-name descname"><span class="pre">get_language_by_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/language_service/utils.html#get_language_by_code"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.utils.get_language_by_code" title="Link to this definition"></a></dt>
+<dd><p>Note:
+The original call was -&gt; #def get_language_by_code(code: str) -&gt; Language:
+For documentation purpose(Sphinx has issues with that definition).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="language_service.utils.get_language_by_id">
+<span class="sig-prename descclassname"><span class="pre">language_service.utils.</span></span><span class="sig-name descname"><span class="pre">get_language_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/language_service/utils.html#get_language_by_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#language_service.utils.get_language_by_id" title="Link to this definition"></a></dt>
+<dd><p>Query a specific language by the given language ID</p>
+</dd></dl>
+
 </section>
 </section>
 
@@ -107,7 +183,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="generation.html" class="btn btn-neutral float-left" title="generation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="intent_classification.html" class="btn btn-neutral float-left" title="intent_classification package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rag_service.html" class="btn btn-neutral float-right" title="rag_service package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

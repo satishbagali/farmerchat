@@ -1,10 +1,8 @@
 rephrasing package
 ==================
 
-Submodules
-----------
 
-rephrasing.rephrase module
+rephrase 
 --------------------------
 
 .. automodule:: rephrasing.rephrase
@@ -12,18 +10,11 @@ rephrasing.rephrase module
    :undoc-members:
    :show-inheritance:
 
-rephrasing.utils module
+utils 
 -----------------------
 
 .. automodule:: rephrasing.utils
    :members:
    :undoc-members:
    :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: rephrasing
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   

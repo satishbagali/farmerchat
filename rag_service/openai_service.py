@@ -3,7 +3,8 @@ import asyncio
 import datetime
 import random
 import openai
-import time
+#import time
+"""
 from openai import (
     RateLimitError,
     APITimeoutError,
@@ -15,9 +16,20 @@ from openai import OpenAI, AsyncOpenAI
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue
 from common.constants import Constants
-
+"""
 
 async def make_openai_request(
+    prompt_message,
+    #model=Config.GPT_3_MODEL,
+    temperature=0,
+    initial_delay: float = 1,
+    exponential_base: float = 2,
+    jitter: bool = True,
+    max_retries: int = 10,
+):
+    """
+    Note : Original method call
+    async def make_openai_request(
     prompt_message,
     model=Config.GPT_3_MODEL,
     temperature=0,
@@ -26,6 +38,7 @@ async def make_openai_request(
     jitter: bool = True,
     max_retries: int = 10,
 ):
+    """
     async_client = AsyncOpenAI(api_key=Config.OPEN_AI_KEY)
     openai.api_key = Config.OPEN_AI_KEY
 

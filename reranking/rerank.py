@@ -1,10 +1,13 @@
+"""
 import datetime, uuid, logging, json, random
 import asyncio
 
 from django_core.config import Config
 from rag_service.openai_service import make_openai_request, query_qdrant_collection
+"""
 
-logger = logging.getLogger(__name__)
+
+#logger = logging.getLogger(__name__)
 
 
 def parse_single_rerank_json(json_string: str):

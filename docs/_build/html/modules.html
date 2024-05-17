@@ -45,7 +45,12 @@
               <p class="caption" role="heading"><span class="caption-text">Content:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="generation.html">generation package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intent_classification.html">intent_classification package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="language_service.html">language_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rag_service.html">rag_service package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rephrasing.html">rephrasing package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reranking.html">reranking package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="retrieval.html">retrieval package</a></li>
 </ul>
 
         </div>
@@ -114,18 +119,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="generation.html">generation package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="generation.html#module-generation.generate_response">generation.generate_response module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="generation.html#generation.generate_response.dummy"><code class="docutils literal notranslate"><span class="pre">dummy()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="generation.html#module-generation.generate_response">generate_response</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="generation.html#generation.generate_response.generate_query_response"><code class="docutils literal notranslate"><span class="pre">generate_query_response()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="generation.html#generation.generate_response.setup_prompt"><code class="docutils literal notranslate"><span class="pre">setup_prompt()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="generation.html#generation-utils-module">generation.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generation.html#module-generation.utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generation.html#generation.utils.insert_generation_data"><code class="docutils literal notranslate"><span class="pre">insert_generation_data()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="intent_classification.html">intent_classification package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="intent_classification.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intent_classification.html#module-intent_classification.constants">intent_classification.constants module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intent_classification.html#module-intent_classification.constants">constants</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="intent_classification.html#intent_classification.constants.IntentConstants"><code class="docutils literal notranslate"><span class="pre">IntentConstants</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="intent_classification.html#intent_classification.constants.IntentConstants.USER_INTENT_CHANGE_CROP"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_CHANGE_CROP</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="intent_classification.html#intent_classification.constants.IntentConstants.USER_INTENT_DISAPPOINTMENT"><code class="docutils literal notranslate"><span class="pre">IntentConstants.USER_INTENT_DISAPPOINTMENT</span></code></a></li>
@@ -139,41 +145,87 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="intent_classification.html#intent-classification-intent-module">intent_classification.intent module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intent_classification.html#module-intent_classification">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intent_classification.html#module-intent_classification.intent">intent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="intent_classification.html#intent_classification.intent.classify_intent"><code class="docutils literal notranslate"><span class="pre">classify_intent()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="intent_classification.html#intent_classification.intent.generate_convo_response"><code class="docutils literal notranslate"><span class="pre">generate_convo_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="intent_classification.html#intent_classification.intent.generate_exit_response"><code class="docutils literal notranslate"><span class="pre">generate_exit_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="intent_classification.html#intent_classification.intent.generate_out_of_context_response"><code class="docutils literal notranslate"><span class="pre">generate_out_of_context_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="intent_classification.html#intent_classification.intent.generate_unclear_qn_response"><code class="docutils literal notranslate"><span class="pre">generate_unclear_qn_response()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="intent_classification.html#intent_classification.intent.process_user_intent"><code class="docutils literal notranslate"><span class="pre">process_user_intent()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="language_service.html">language_service package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="language_service.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="language_service.html#language-service-asr-module">language_service.asr module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="language_service.html#language-service-translation-module">language_service.translation module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="language_service.html#language-service-tts-module">language_service.tts module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="language_service.html#language-service-utils-module">language_service.utils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="language_service.html#module-language_service">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="language_service.html#module-language_service.asr">asr</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.asr.transcribe_and_translate"><code class="docutils literal notranslate"><span class="pre">transcribe_and_translate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="language_service.html#module-language_service.translation">translation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.translation.a_translate_to"><code class="docutils literal notranslate"><span class="pre">a_translate_to()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.translation.a_translate_to_english"><code class="docutils literal notranslate"><span class="pre">a_translate_to_english()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.translation.detect_language_and_translate_to_english"><code class="docutils literal notranslate"><span class="pre">detect_language_and_translate_to_english()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="language_service.html#module-language_service.tts">tts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.tts.synthesize_speech"><code class="docutils literal notranslate"><span class="pre">synthesize_speech()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.tts.synthesize_speech_azure"><code class="docutils literal notranslate"><span class="pre">synthesize_speech_azure()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="language_service.html#module-language_service.utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.utils.get_all_languages"><code class="docutils literal notranslate"><span class="pre">get_all_languages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.utils.get_language_by_code"><code class="docutils literal notranslate"><span class="pre">get_language_by_code()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="language_service.html#language_service.utils.get_language_by_id"><code class="docutils literal notranslate"><span class="pre">get_language_by_id()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="manage.html">manage module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="manage.html#manage.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="rag_service.html">rag_service package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rag_service.html#module-rag_service.execute_rag">execute_rag</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rag_service.html#rag_service.execute_rag.execute_rag_pipeline"><code class="docutils literal notranslate"><span class="pre">execute_rag_pipeline()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rag_service.html#module-rag_service.openai_service">openai_service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rag_service.html#rag_service.openai_service.make_openai_request"><code class="docutils literal notranslate"><span class="pre">make_openai_request()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rag_service.html#rag_service.openai_service.query_qdrant_collection"><code class="docutils literal notranslate"><span class="pre">query_qdrant_collection()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rag_service.html#module-rag_service.utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rag_service.html#rag_service.utils.post_process_rag_pipeline"><code class="docutils literal notranslate"><span class="pre">post_process_rag_pipeline()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="rephrasing.html">rephrasing package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rephrasing.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rephrasing.html#rephrasing-rephrase-module">rephrasing.rephrase module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rephrasing.html#rephrasing-utils-module">rephrasing.utils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rephrasing.html#module-rephrasing">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rephrasing.html#module-rephrasing.rephrase">rephrase</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rephrasing.html#rephrasing.rephrase.condense_query_prompt"><code class="docutils literal notranslate"><span class="pre">condense_query_prompt()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rephrasing.html#rephrasing.rephrase.rephrase_query"><code class="docutils literal notranslate"><span class="pre">rephrase_query()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rephrasing.html#module-rephrasing.utils">utils</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rephrasing.html#rephrasing.utils.insert_rephrase_data"><code class="docutils literal notranslate"><span class="pre">insert_rephrase_data()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="reranking.html">reranking package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="reranking.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reranking.html#reranking-rerank-module">reranking.rerank module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reranking.html#reranking-utils-module">reranking.utils module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reranking.html#module-reranking">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reranking.html#module-reranking.rerank">rerank module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="reranking.html#reranking.rerank.parse_single_rerank_json"><code class="docutils literal notranslate"><span class="pre">parse_single_rerank_json()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="reranking.html#reranking.rerank.rerank_query"><code class="docutils literal notranslate"><span class="pre">rerank_query()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reranking.html#utils-module">utils module</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="retrieval.html">retrieval package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="retrieval.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="retrieval.html#retrieval-content-retrieval-module">retrieval.content_retrieval module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="retrieval.html#module-retrieval">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retrieval.html#module-retrieval.content_retrieval">content_retrieval</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="retrieval.html#retrieval.content_retrieval.content_retrieval"><code class="docutils literal notranslate"><span class="pre">content_retrieval()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

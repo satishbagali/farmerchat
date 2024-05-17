@@ -1,3 +1,8 @@
+"""
+This is "translation.py"
+"""
+
+"""
 import asyncio
 from google.cloud import translate_v2 as translate
 from google.cloud import texttospeech
@@ -5,8 +10,10 @@ from google.oauth2 import service_account
 
 from common.constants import Constants
 from django_core.config import Config
+"""
 
-credentials = service_account.Credentials.from_service_account_file(Config.GOOGLE_APPLICATION_CREDENTIALS)
+
+#credentials = service_account.Credentials.from_service_account_file(Config.GOOGLE_APPLICATION_CREDENTIALS)
 
 
 async def a_translate_to_english(text: str) -> str:

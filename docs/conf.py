@@ -17,7 +17,6 @@ sys.path.insert(0, os.path.abspath('../database'))
 sys.path.insert(0, os.path.abspath('../database/models'))
 sys.path.insert(0, os.path.abspath('../common'))
 sys.path.insert(0, os.path.abspath('../django_core/'))
-sys.path.insert(0, os.path.abspath('../django_core/config'))
 
 project = 'Agri Chat'
 copyright = '2024, DigitalGreen'

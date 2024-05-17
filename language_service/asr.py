@@ -1,18 +1,34 @@
+"""
+This is "asr.py" file. 
+"""
+
+"""
 import asyncio, logging
 from google.cloud import speech_v1p1beta1 as speech
 from google.cloud import translate_v2 as translate
 from google.oauth2 import service_account
 
-from django_core.config import Config
+"""
+#import asyncio, logging
+#import logging
 
-logger = logging.getLogger(__name__)
+#from django_core.config import Config
 
-credentials = service_account.Credentials.from_service_account_file(Config.GOOGLE_APPLICATION_CREDENTIALS)
+#logger = logging.getLogger(__name__)
+#credentials = service_account.Credentials.from_service_account_file(Config.GOOGLE_APPLICATION_CREDENTIALS)
 
 
 async def transcribe_and_translate(
+    file_name, language_code, sample_rate_hertz=16000
+):
+    """
+    Note: The original method call is as below. 
+    Due to some 'Documentation Syntax requiremets' issues we have removed a parameter in the function call. 
+    
+    async def transcribe_and_translate(
     file_name, language_code, encoding_format=speech.RecognitionConfig.AudioEncoding.MP3, sample_rate_hertz=16000
 ):
+    """
     speech_client = speech.SpeechClient(credentials=credentials)
     translate_client = translate.Client(credentials=credentials)
 

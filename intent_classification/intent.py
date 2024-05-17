@@ -1,6 +1,11 @@
+"""
+This is "intent.py". 
+
 from django_core.config import Config
 from rag_service.openai_service import make_openai_request
 from intent_classification.constants import IntentConstants
+"""
+
 
 
 async def classify_intent(qn):

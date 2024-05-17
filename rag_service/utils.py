@@ -1,7 +1,10 @@
+"""
 from django_core.config import Config
 from generation.utils import insert_generation_data
 from rephrasing.utils import insert_rephrase_data
 from reranking.utils import insert_rerank_data
+"""
+
 
 
 def post_process_rag_pipeline(
@@ -9,8 +12,18 @@ def post_process_rag_pipeline(
     rephrased_query_response,
     reranked_query_response,
     generated_response,
+    #with_db_config=Config.WITH_DB_CONFIG,
+):
+    """
+    Note : Original method call. For documenation purpose removed the with_db_config inclusion
+    def post_process_rag_pipeline(
+    message_id,
+    rephrased_query_response,
+    reranked_query_response,
+    generated_response,
     with_db_config=Config.WITH_DB_CONFIG,
 ):
+    """
     data_saved = False
     if with_db_config:
         # insert data logs to db

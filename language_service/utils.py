@@ -1,13 +1,26 @@
-import logging
+"""
+This is "utils.py"
+"""
 
+"""
+import logging
 from database.models import Language
 from database.database_config import db_conn
 from database.db_operations import get_record_by_field
 
-logger = logging.getLogger(__name__)
+"""
 
 
-def get_language_by_code(code: str) -> Language:
+#logger = logging.getLogger(__name__)
+
+#def get_language_by_code(code):
+def get_language_by_code(code):
+    
+    """
+    Note:
+    The original call was -> #def get_language_by_code(code: str) -> Language:
+    For documentation purpose(Sphinx has issues with that definition).
+    """
     language = []
     with db_conn:
         try:

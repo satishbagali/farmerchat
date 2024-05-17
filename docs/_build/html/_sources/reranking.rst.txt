@@ -1,10 +1,8 @@
 reranking package
 =================
 
-Submodules
-----------
 
-reranking.rerank module
+rerank module
 -----------------------
 
 .. automodule:: reranking.rerank
@@ -12,18 +10,10 @@ reranking.rerank module
    :undoc-members:
    :show-inheritance:
 
-reranking.utils module
+utils module
 ----------------------
 
 .. automodule:: reranking.utils
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: reranking
    :members:
    :undoc-members:
    :show-inheritance:

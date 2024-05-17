@@ -1,10 +1,8 @@
 intent\_classification package
 ==============================
 
-Submodules
-----------
 
-intent\_classification.constants module
+constants 
 ---------------------------------------
 
 .. automodule:: intent_classification.constants
@@ -12,18 +10,10 @@ intent\_classification.constants module
    :undoc-members:
    :show-inheritance:
 
-intent\_classification.intent module
+intent 
 ------------------------------------
 
 .. automodule:: intent_classification.intent
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: intent_classification
    :members:
    :undoc-members:
    :show-inheritance:

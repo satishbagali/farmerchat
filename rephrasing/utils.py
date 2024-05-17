@@ -1,5 +1,8 @@
+"""
 from database.models import RephraseMetrics
 from database.db_operations import create_record
+
+"""
 
 
 def insert_rephrase_data(rephrase_data_logs: dict, message_id: str = None):

@@ -1,13 +1,23 @@
+"""
 import json, datetime, logging
 from django_core.config import Config
 from common.utils import send_request
 
-logger = logging.getLogger(__name__)
+"""
+
+#logger = logging.getLogger(__name__)
 
 
 def content_retrieval(
+    original_query, email, #domain_url=Config.CONTENT_DOMAIN_URL, api_endpoint=Config.CONTENT_RETRIEVAL_ENDPOINT
+):
+    """
+    Note : The original definition is below. For the documentation purpose two parameters are not included due to a documentation defect
+    def content_retrieval(
     original_query, email, domain_url=Config.CONTENT_DOMAIN_URL, api_endpoint=Config.CONTENT_RETRIEVAL_ENDPOINT
 ):
+    
+    """
     response_map = {}
     retrieval_start = None
     retrieval_end = None

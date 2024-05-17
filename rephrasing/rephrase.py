@@ -1,8 +1,11 @@
 import datetime
+"""
 import asyncio
 
 from django_core.config import Config
 from rag_service.openai_service import make_openai_request
+"""
+
 
 
 async def condense_query_prompt(original_query, chat_history):
