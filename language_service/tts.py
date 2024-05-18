@@ -21,6 +21,10 @@ from django_core.config import Config
 
 
 async def synthesize_speech_azure(text_to_synthesize, language_code, aiohttp_session):
+    """
+    Synthesise speech using Azure TTS model.
+    `Azure TTS Docs <https://learn.microsoft.com/en-us/azure/ai-services/speech-service/>`_
+    """
     audio_content = None
 
     # use Azure for Speech synthesis

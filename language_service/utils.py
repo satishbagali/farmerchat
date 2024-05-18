@@ -17,6 +17,7 @@ from database.db_operations import get_record_by_field
 def get_language_by_code(code):
     
     """
+    Query Language instance by language code.
     Note:
     The original call was -> #def get_language_by_code(code: str) -> Language:
     For documentation purpose(Sphinx has issues with that definition).

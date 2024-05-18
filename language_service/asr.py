@@ -22,9 +22,12 @@ async def transcribe_and_translate(
     file_name, language_code, sample_rate_hertz=16000
 ):
     """
-    Note: The original method call is as below. 
-    Due to some 'Documentation Syntax requiremets' issues we have removed a parameter in the function call. 
     
+    Generate transcriptions (text) and confidence score for a given audio or voice file
+    in a specified language using an ASR model.
+    
+    Note: The original method call is as below. 
+    Due to some 'Documentation Syntax requiremets' issues we have removed a parameter in the function call.
     async def transcribe_and_translate(
     file_name, language_code, encoding_format=speech.RecognitionConfig.AudioEncoding.MP3, sample_rate_hertz=16000
 ):
