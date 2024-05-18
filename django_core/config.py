@@ -1,5 +1,8 @@
+"""
 import os
 from dotenv import load_dotenv, dotenv_values
+
+"""
 
 # load_dotenv()
 ENV_CONFIG = dotenv_values(encoding="utf-8")
@@ -8,6 +11,9 @@ if os.path.isfile(".config.env"):
 
 
 class Config:
+    """
+    This is the Config cladd
+    """
     # DB config
     WITH_DB_CONFIG = ENV_CONFIG.get("WITH_DB_CONFIG", False)
     DB_NAME = ENV_CONFIG.get("DB_NAME")
@@ -19,7 +25,6 @@ class Config:
     STALE_TIMEOUT = ENV_CONFIG.get("DB_STALE_TIMEOUT")
 
     # prompts
-    GENERATION_PROMPT = ENV_CONFIG.get("GENERATION_PROMPT")
     REPHRASE_QUESTION_PROMPT = ENV_CONFIG.get("REPHRASE_QUESTION_PROMPT")
     RERANKING_PROMPT_SINGLE_TEMPLATE = ENV_CONFIG.get("RERANKING_PROMPT_SINGLE_TEMPLATE")
     RERANK_SINGLE_JSON_EXAMPLE = ENV_CONFIG.get("RERANK_SINGLE_JSON_EXAMPLE")

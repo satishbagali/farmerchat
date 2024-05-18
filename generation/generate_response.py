@@ -16,6 +16,7 @@ from rag_service.openai_service import make_openai_request
 async def setup_prompt(user_name, context_chunks, rephrased_query):
     #satish : async def setup_prompt(user_name, context_chunks, rephrased_query, system_prompt=Config.GENERATION_PROMPT#):
     """
+    Setup generation response prompt for a rephrased user query with retrieved chunks.
     Note : The actual function call is,
     async def setup_prompt(user_name, context_chunks, rephrased_query, system_prompt=Config.GENERATION_PROMPT#):
     """
@@ -33,6 +34,9 @@ async def setup_prompt(user_name, context_chunks, rephrased_query):
 
 
 async def generate_query_response(original_query, user_name, context_chunks, rephrased_query):
+    """
+    Generate final response for a rephrased user query with the retrieved chunks.
+    """
     response_map = {}
     llm_response = None
     response_gen_start = None

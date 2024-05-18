@@ -1,18 +1,21 @@
 django\_core package
 ====================
 
-Submodules
-----------
 
-django\_core.asgi module
+
+asgi 
 ------------------------
 
-.. automodule:: django_core.asgi
-   :members:
-   :undoc-members:
-   :show-inheritance:
+ASGI config for django_core project.
 
-django\_core.celery module
+It exposes the ASGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/4.1/howto/deployment/asgi/
+
+
+
+celery 
 --------------------------
 
 .. automodule:: django_core.celery
@@ -20,7 +23,7 @@ django\_core.celery module
    :undoc-members:
    :show-inheritance:
 
-django\_core.config module
+config 
 --------------------------
 
 .. automodule:: django_core.config
@@ -28,7 +31,15 @@ django\_core.config module
    :undoc-members:
    :show-inheritance:
 
-django\_core.settings module
+logging_config 
+--------------------------
+
+.. automodule:: django_core.logging_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+settings 
 ----------------------------
 
 .. automodule:: django_core.settings
@@ -36,7 +47,7 @@ django\_core.settings module
    :undoc-members:
    :show-inheritance:
 
-django\_core.urls module
+urls 
 ------------------------
 
 .. automodule:: django_core.urls
@@ -44,18 +55,11 @@ django\_core.urls module
    :undoc-members:
    :show-inheritance:
 
-django\_core.wsgi module
+wsgi 
 ------------------------
 
 .. automodule:: django_core.wsgi
    :members:
    :undoc-members:
    :show-inheritance:
-
-Module contents
----------------
-
-.. automodule:: django_core
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   
