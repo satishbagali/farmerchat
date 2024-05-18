@@ -11,6 +11,9 @@ from rag_service.openai_service import make_openai_request, query_qdrant_collect
 
 
 def parse_single_rerank_json(json_string: str):
+    """
+    Parse single entry of reranked result.
+    """
     start_index = json_string.find("{")
     end_index = json_string.rfind("}") + 1
 
@@ -19,6 +22,9 @@ def parse_single_rerank_json(json_string: str):
 
 
 async def rerank_query(original_query, rephrased_query, email_id, retrieval_results=[]):
+    """
+    Rerank the retrieved content chunks with the rephrased query from OpenAI.
+    """
     response_map = {}
     doc_map = None
     reranked_chunk_map = None
