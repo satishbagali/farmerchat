@@ -15,6 +15,8 @@ def post_process_rag_pipeline(
     #with_db_config=Config.WITH_DB_CONFIG,
 ):
     """
+    Save or log the RAG pipeline metrics to DB.
+    
     Note : Original method call. For documenation purpose removed the with_db_config inclusion
     def post_process_rag_pipeline(
     message_id,

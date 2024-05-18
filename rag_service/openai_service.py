@@ -28,6 +28,8 @@ async def make_openai_request(
     max_retries: int = 10,
 ):
     """
+    Make OpenAI API request with the prompt message and other relevant OpenAI configuration.
+    
     Note : Original method call
     async def make_openai_request(
     prompt_message,
