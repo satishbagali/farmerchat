@@ -12,7 +12,10 @@ def content_retrieval(
     original_query, email, #domain_url=Config.CONTENT_DOMAIN_URL, api_endpoint=Config.CONTENT_RETRIEVAL_ENDPOINT
 ):
     """
-    Note : The original definition is below. For the documentation purpose two parameters are not included due to a documentation defect
+    Retrieve content chunks relevant to the user query from content retrieval site.
+    
+    Note : 
+    The original definition is below. For the documentation purpose two parameters are not included due to a documentation defect
     def content_retrieval(
     original_query, email, domain_url=Config.CONTENT_DOMAIN_URL, api_endpoint=Config.CONTENT_RETRIEVAL_ENDPOINT
 ):
